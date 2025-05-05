@@ -1,0 +1,329 @@
+body {
+    margin: 100px 0;
+    background-color: var(--navy-dark);
+    box-sizing: border-box;
+    font-size: 18px;
+    color: var(--purple-light);
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+--purple: hsl(246, 80%, 60%);
+--orange-work: hsl(15, 100%, 70%);
+--blue-play: hsl(195, 74%, 62%);
+--pink-study: hsl(348, 100%, 68%);
+--green-exercise: hsl(145, 58%, 55%);
+--purple-social: hsl(264, 64%, 52%);
+--yellow-selfcare: hsl(43, 84%, 65%);
+
+--navy-dark: hsl(226, 43%, 10%);
+--navy-medium: hsl(235, 46%, 20%);
+--purple-light: hsl(235, 45%, 61%);
+--navy-light: hsl(236, 100%, 87%);
+
+/* for hover state- not in original template */
+
+--hover-purple: hsl(236, 41%, 34%);
+}
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300, 400, 500;
+    font-style: normal;
+  }
+
+#hide {
+    display: none;
+}
+
+.user-card {
+    width: 350px;
+    height: 210px;
+    background-color: var(--navy-medium);
+    border-radius: 20px;
+    
+    margin: auto;
+    text-align: center;
+    font-size: 1.3rem;
+    word-spacing: 2.5rem;
+}
+
+#user-profile {
+    display: flex;
+    text-align: left;
+    background-color: var(--purple);
+    height: 65%;
+    width: 100%;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    color: var(--navy-light);
+    word-spacing: normal;
+}
+
+#user-detail {
+    width: 320px;
+    height: 80px;
+    margin: auto;
+    justify-content: center;
+}
+
+#user-profile .subheading {
+    font-size: 1rem;
+}
+
+.daily:hover, .weekly:hover, .monthly:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#user-profile h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+}
+
+#user-icon {
+    border: 3.5px solid white;
+    border-radius: 50%;
+    max-width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+.info-card {
+    position: relative;
+    width: 350px;
+    height: 170px;
+    background-color: var(--navy-medium);
+    border-radius: 20px;
+    text-align: left;
+    font-size: 1.3rem;
+    z-index: 1;
+}
+
+.info-card:hover {
+    background-color:var(--hover-purple);
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    z-index: -1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.work, .social, .exercise, .play, .self-care,  .study {
+background-repeat: no-repeat;
+background-position-x: 250px;
+}
+
+.work::before, .social::before, .exercise::before, .play::before, .self-care::before,  .study::before {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    height: 50px;
+    width: 20px;
+    border-top-left-radius: 25px;
+}
+
+.work::after, .social::after, .exercise::after, .play::after, .self-care::after,  .study::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    height: 50px;
+    width: 20px;
+    border-top-right-radius: 25px;
+}
+
+.work {
+    background-color: var(--orange-work);
+    
+    background-image: url(/images/icon-work.svg);
+    
+}
+
+.work::before, 
+.work::after {
+    box-shadow: 0 -25px 0 0 var(--orange-work); 
+}
+
+.play {
+    background-color: var(--blue-play);
+    background-image: url(/images/icon-play.svg);
+}
+
+.play::before, 
+.play::after {
+    box-shadow: 0 -25px 0 0 var(--blue-play); 
+}
+
+.study {
+    background-color: var(--pink-study);
+    background-image: url(/images/icon-study.svg);
+}
+
+.study::before, 
+.study::after {
+    box-shadow: 0 -25px 0 0 var(--pink-study); 
+}
+
+.exercise {
+    background-color: var(--green-exercise);
+    background-image: url(/images/icon-exercise.svg);
+}
+
+.exercise::before,
+.exercise::after {
+    box-shadow: 0 -25px 0 0 var(--green-exercise); 
+}
+
+.social {
+    background-color: var(--purple-social);
+    background-image: url(/images/icon-social.svg);
+}
+
+.social::before,
+.social::after {
+    box-shadow: 0 -25px 0 0 var(--purple-social); 
+}
+
+.self-care {
+    background-color: var(--yellow-selfcare);
+    background-image: url(/images/icon-self-care.svg);
+}
+
+.self-care::before,
+.self-care::after {
+    box-shadow: 0 -25px 0 0 var(--yellow-selfcare); 
+}
+
+.card-details {
+    padding: 20px;
+    margin-top: 40px;
+    line-height: 1;
+}
+
+.card-details p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-details h2 {
+    color: white;
+    font-weight: 300;
+    margin: 0; 
+}
+
+.previous {
+    font-size: 0.9rem;
+    font-weight: 500;
+    float: right;
+    margin-top: -20px;
+    color: var(--navy-light)
+}
+
+.hamburger-menu {
+    float: right;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+footer {
+    margin: 100px;
+}
+
+footer a {
+    color: var(--navy-light);
+}
+
+/* MOBILE BREAKPOINTS: 
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+@media (min-width: 400px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        grid-template-areas: 
+        "box-1";
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        margin: 100px;
+        display: grid;
+        grid-template-columns: .2fr .2fr .2fr .5fr;
+        grid-template-rows: 250px 250px;
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-1 box-2";
+        align-items: center;
+        gap: 1em;
+        max-width: 1000px;
+    }
+    
+    .info-card, .user-card {
+        height: 100%;
+        max-width: 250px;
+        line-height: 2;
+        text-align: left;
+    }
+
+    .info-card h2 {
+        font-size: 4rem;
+    }
+
+    
+    #links {
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-card .previous {
+        float: none;
+        line-height: 3;
+        margin: 0;
+    }
+
+    #user-detail {
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        line-height: normal
+    }
+    #user-detail .subheading {
+        line-height: 2;
+    }
+    #user-detail h1 {
+        font-size: 2rem;
+    }
+
+    #user-icon {
+        float: none;
+        margin: 20px 0px;
+    }
+
+    #user-profile {
+        height: 70%;
+        margin: 0;
+    }
+
+    .banner {
+        background-position-x: 150px;
+    }
+}
