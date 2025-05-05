@@ -8,22 +8,22 @@ body {
 }
 
 :root {
---purple: hsl(246, 80%, 60%);
---orange-work: hsl(15, 100%, 70%);
---blue-play: hsl(195, 74%, 62%);
---pink-study: hsl(348, 100%, 68%);
---green-exercise: hsl(145, 58%, 55%);
---purple-social: hsl(264, 64%, 52%);
---yellow-selfcare: hsl(43, 84%, 65%);
+    --purple: hsl(246, 80%, 60%);
+    --orange-work: hsl(15, 100%, 70%);
+    --blue-play: hsl(195, 74%, 62%);
+    --pink-study: hsl(348, 100%, 68%);
+    --green-exercise: hsl(145, 58%, 55%);
+    --purple-social: hsl(264, 64%, 52%);
+    --yellow-selfcare: hsl(43, 84%, 65%);
 
---navy-dark: hsl(226, 43%, 10%);
---navy-medium: hsl(235, 46%, 20%);
---purple-light: hsl(235, 45%, 61%);
---navy-light: hsl(236, 100%, 87%);
+    --navy-dark: hsl(226, 43%, 10%);
+    --navy-medium: hsl(235, 46%, 20%);
+    --purple-light: hsl(235, 45%, 61%);
+    --navy-light: hsl(236, 100%, 87%);
 
-/* for hover state- not in original template */
+    /* for hover state- not in original template */
 
---hover-purple: hsl(236, 41%, 34%);
+    --hover-purple: hsl(236, 41%, 34%);
 }
 
 .rubik {
@@ -31,10 +31,6 @@ body {
     font-optical-sizing: auto;
     font-weight: 300, 400, 500;
     font-style: normal;
-  }
-
-#hide {
-    display: none;
 }
 
 .user-card {
@@ -42,7 +38,7 @@ body {
     height: 210px;
     background-color: var(--navy-medium);
     border-radius: 20px;
-    
+
     margin: auto;
     text-align: center;
     font-size: 1.3rem;
@@ -73,7 +69,9 @@ body {
     font-size: 1rem;
 }
 
-.daily:hover, .weekly:hover, .monthly:hover {
+.daily:hover,
+.weekly:hover,
+.monthly:hover {
     color: white;
     cursor: pointer;
 }
@@ -105,7 +103,7 @@ body {
 }
 
 .info-card:hover {
-    background-color:var(--hover-purple);
+    background-color: var(--hover-purple);
 }
 
 .banner {
@@ -117,12 +115,22 @@ body {
     border-top-right-radius: 20px;
 }
 
-.work, .social, .exercise, .play, .self-care,  .study {
-background-repeat: no-repeat;
-background-position-x: 250px;
+.work,
+.social,
+.exercise,
+.play,
+.self-care,
+.study {
+    background-repeat: no-repeat;
+    background-position-x: 250px;
 }
 
-.work::before, .social::before, .exercise::before, .play::before, .self-care::before,  .study::before {
+.work::before,
+.social::before,
+.exercise::before,
+.play::before,
+.self-care::before,
+.study::before {
     content: "";
     position: absolute;
     bottom: -50px;
@@ -132,7 +140,12 @@ background-position-x: 250px;
     border-top-left-radius: 25px;
 }
 
-.work::after, .social::after, .exercise::after, .play::after, .self-care::after,  .study::after {
+.work::after,
+.social::after,
+.exercise::after,
+.play::after,
+.self-care::after,
+.study::after {
     content: "";
     position: absolute;
     bottom: -50px;
@@ -144,14 +157,14 @@ background-position-x: 250px;
 
 .work {
     background-color: var(--orange-work);
-    
+
     background-image: url(/images/icon-work.svg);
-    
+
 }
 
-.work::before, 
+.work::before,
 .work::after {
-    box-shadow: 0 -25px 0 0 var(--orange-work); 
+    box-shadow: 0 -25px 0 0 var(--orange-work);
 }
 
 .play {
@@ -159,9 +172,9 @@ background-position-x: 250px;
     background-image: url(/images/icon-play.svg);
 }
 
-.play::before, 
+.play::before,
 .play::after {
-    box-shadow: 0 -25px 0 0 var(--blue-play); 
+    box-shadow: 0 -25px 0 0 var(--blue-play);
 }
 
 .study {
@@ -169,9 +182,9 @@ background-position-x: 250px;
     background-image: url(/images/icon-study.svg);
 }
 
-.study::before, 
+.study::before,
 .study::after {
-    box-shadow: 0 -25px 0 0 var(--pink-study); 
+    box-shadow: 0 -25px 0 0 var(--pink-study);
 }
 
 .exercise {
@@ -181,7 +194,7 @@ background-position-x: 250px;
 
 .exercise::before,
 .exercise::after {
-    box-shadow: 0 -25px 0 0 var(--green-exercise); 
+    box-shadow: 0 -25px 0 0 var(--green-exercise);
 }
 
 .social {
@@ -191,7 +204,7 @@ background-position-x: 250px;
 
 .social::before,
 .social::after {
-    box-shadow: 0 -25px 0 0 var(--purple-social); 
+    box-shadow: 0 -25px 0 0 var(--purple-social);
 }
 
 .self-care {
@@ -201,12 +214,10 @@ background-position-x: 250px;
 
 .self-care::before,
 .self-care::after {
-    box-shadow: 0 -25px 0 0 var(--yellow-selfcare); 
+    box-shadow: 0 -25px 0 0 var(--yellow-selfcare);
 }
 
 .card-details {
-    padding: 20px;
-    margin-top: 40px;
     line-height: 1;
 }
 
@@ -219,7 +230,7 @@ background-position-x: 250px;
 .card-details h2 {
     color: white;
     font-weight: 300;
-    margin: 0; 
+    margin: 0;
 }
 
 .previous {
@@ -250,32 +261,37 @@ footer a {
 - Desktop: 1440px */
 
 @media (min-width: 400px) {
-    body {
+    #wrapper {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1em;
-        grid-template-areas: 
+        grid-template-areas:
         "box-1";
+        gap: 1em;
         align-items: center;
         justify-items: center;
+    }
+
+    .card-details {
+        padding: 40px;
     }
 }
 
 @media (min-width: 1000px) {
-    body {
+    #wrapper {
         margin: 100px;
         display: grid;
         grid-template-columns: .2fr .2fr .2fr .5fr;
         grid-template-rows: 250px 250px;
-        grid-template-areas: 
-        "box-1 box-2"
-        "box-1 box-2";
+        grid-template-areas:
+            "box-1 box-2"
+            "box-1 box-2";
         align-items: center;
         gap: 1em;
         max-width: 1000px;
     }
-    
-    .info-card, .user-card {
+
+    .info-card,
+    .user-card {
         height: 100%;
         max-width: 250px;
         line-height: 2;
@@ -286,7 +302,7 @@ footer a {
         font-size: 4rem;
     }
 
-    
+
     #links {
         padding: 20px 40px;
         display: flex;
@@ -306,9 +322,11 @@ footer a {
         flex-direction: column;
         line-height: normal
     }
+
     #user-detail .subheading {
         line-height: 2;
     }
+
     #user-detail h1 {
         font-size: 2rem;
     }
@@ -325,5 +343,9 @@ footer a {
 
     .banner {
         background-position-x: 150px;
+    }
+
+    .card-details h2 {
+       line-height: 1.6;
     }
 }
