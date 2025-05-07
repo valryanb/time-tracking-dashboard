@@ -69,6 +69,7 @@ Further training with Javascript and CSS Grid.
 ### Useful resources
 
 - [Destructuring Nested Objects in Javascript](https://medium.com/@pyrolistical/destructuring-nested-objects-9dabdd01a3b8) - A lifesaver for object destructuring in this project!
+- [Creating Inverted Borders in CSS](https://itnext.io/how-to-make-a-fancy-inverted-border-radius-in-css-5db048a53f95) - This project would have been impossible without this amazing tutorial from Jeroen Knol.
 
 ## Author
 
