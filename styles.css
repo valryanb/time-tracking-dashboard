@@ -24,6 +24,7 @@ body {
     /* for hover state- not in original template */
 
     --hover-purple: hsl(236, 41%, 34%);
+    --white: #ffffff;
 }
 
 .rubik {
@@ -33,52 +34,58 @@ body {
     font-style: normal;
 }
 
-.user-card {
-    width: 350px;
+#user-card {
     height: 210px;
     background-color: var(--navy-medium);
-    border-radius: 20px;
-
-    margin: auto;
     text-align: center;
-    font-size: 1.3rem;
     word-spacing: 2.5rem;
 }
 
 #user-profile {
     display: flex;
-    text-align: left;
     background-color: var(--purple);
     height: 65%;
-    width: 100%;
-    border-radius: 20px;
-    margin: auto;
     margin-bottom: 20px;
     color: var(--navy-light);
     word-spacing: normal;
 }
 
+#user-profile,
+.banner {
+    width: 100%;
+}
+
 #user-detail {
     width: 320px;
     height: 80px;
-    margin: auto;
     justify-content: center;
 }
 
-#user-profile .subheading {
+#user-profile,
+#user-detail {
+    margin: auto;
+}
+
+#user-profile .subheading,
+.card-details p {
     font-size: 1rem;
 }
 
 #links button:hover {
-    color: white;
+    color: var(--white);
     cursor: pointer;
+}
+
+#user-profile h1,
+.card-details h2 {
+    font-weight: 300;
 }
 
 #user-profile h1 {
     font-size: 1.8rem;
-    font-weight: 300;
+
     margin: 0;
-    color: white;
+    color: var(--white);
 }
 
 #user-icon {
@@ -91,13 +98,20 @@ body {
 
 .info-card {
     position: relative;
-    width: 350px;
     height: 170px;
     background-color: var(--navy-medium);
-    border-radius: 20px;
-    text-align: left;
-    font-size: 1.3rem;
     z-index: 1;
+}
+
+.info-card,
+#user-card {
+    width: 350px;
+}
+
+.info-card,
+#user-card,
+#user-profile {
+    border-radius: 20px;
 }
 
 .info-card:hover {
@@ -106,7 +120,6 @@ body {
 
 .banner {
     position: absolute;
-    width: 100%;
     height: 40px;
     z-index: -1;
     border-top-left-radius: 20px;
@@ -155,9 +168,7 @@ body {
 
 .work {
     background-color: var(--orange-work);
-
     background-image: url(/images/icon-work.svg);
-
 }
 
 .work::before,
@@ -220,14 +231,12 @@ body {
 }
 
 .card-details p {
-    color: white;
-    font-size: 1rem;
+    color: var(--white);
     font-weight: 500;
 }
 
 .card-details h2 {
-    color: white;
-    font-weight: 300;
+    color: var(--white);
     margin: 0;
 }
 
@@ -256,12 +265,23 @@ footer a {
 #links button {
     background-color: transparent;
     border: none;
-    font-size: 1.3rem;
+    padding-top: 20px;
     color: var(--purple-light)
 }
 
+#user-card,
+.info-card,
+#links button {
+    font-size: 1.3rem;
+}
+
 #links .active {
-    color: white;
+    color: var(--white);
+}
+
+.info-card,
+#user-profile {
+    text-align: left;
 }
 
 /* MOBILE BREAKPOINTS: 
@@ -270,11 +290,12 @@ footer a {
 - Desktop: 1440px */
 
 @media (min-width: 400px) {
+
+    .wrapper,
     #feed-content {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas:
-        "box-1";
         gap: 1em;
         align-items: center;
         justify-items: center;
@@ -286,38 +307,52 @@ footer a {
 }
 
 @media (min-width: 1000px) {
+    .wrapper {
+        padding: 100px;
+    }
+
+    #feed-content,
+    .wrapper {
+        gap: 1em;
+    }
+
+    #feed-content {
+        grid-auto-flow: column;
+    }
+
+    .wrapper,
+    #user-content,
     #feed-content {
         justify-self: center;
         display: grid;
         grid-template-columns: .2fr .2fr .2fr .5fr;
         grid-template-rows: 250px 250px;
         grid-template-areas:
-            "box-1 box-2"
-            "box-1 box-2";
+            "box-1 box-2 box-2"
+            "box-1 box-2 box-2";
         align-items: center;
-        gap: 1em;
+        justify-items: center;
         max-width: 1000px;
     }
 
     .info-card,
-    .user-card {
+    #user-card {
         height: 100%;
         max-width: 250px;
         line-height: 2;
-        text-align: left;
+
     }
 
     #links button {
-        padding-bottom: 20px;
+        padding-right: 200px;
     }
 
     .info-card h2 {
         font-size: 4rem;
     }
 
-
     #links {
-        padding: 20px 40px;
+        padding: 0px 40px;
         display: flex;
         flex-direction: column;
     }
@@ -330,7 +365,7 @@ footer a {
 
     #user-detail {
         height: 200px;
-        padding: 20px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         line-height: normal
@@ -359,6 +394,6 @@ footer a {
     }
 
     .card-details h2 {
-       line-height: 1.6;
+        line-height: 1.6;
     }
 }
