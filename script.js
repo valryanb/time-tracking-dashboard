@@ -1,10 +1,39 @@
-// to do: unique templates based on user selection of week/day/month
+let dataArr;
 
-function generateAppHtml(dataArr) {
+async function retrieveData(){
+    dataArr = await fetch('./data.json')
+    .then(response => {
+    return response.json();
+})
+generateAppHtml(dataArr);
+};
+
+retrieveData();
+
+document.addEventListener("click", function(e){
+    if(e.target.id === "weekly"){
+        generateAppHtml(dataArr,"weekly");
+      document.getElementById("weekly").classList.toggle("active");
+    }
+
+    else if(e.target.id === "daily"){
+        generateAppHtml(dataArr,"daily");
+        document.getElementById("daily").classList.toggle("active");
+      }
+
+      else if(e.target.id === "monthly"){
+        generateAppHtml(dataArr,"monthly");
+        document.getElementById("monthly").classList.toggle("active");
+      }
+  });
+
+function generateAppHtml(dataArr, timeSelection = "weekly") {
 let appHtml = [];
 
 dataArr.forEach(function(item){
-    const { title, timeframes: {weekly: {current, previous}} } = item;
+    const { title, timeframes } = item;
+    const { current, previous } = timeframes[timeSelection];
+    
     appHtml += `
     <div class="info-card">
   <div class="banner ${title.toLowerCase().replace(/ /g, '-')}" style="grid-area: box-2"></div>
@@ -20,13 +49,3 @@ dataArr.forEach(function(item){
 })
 return document.getElementById("feed-content").innerHTML += appHtml
 }
-
-async function retrieveData(){
-    const dataArr = await fetch('./data.json')
-    .then(response => {
-    return response.json();
-})
-generateAppHtml(dataArr);
-};
-
-retrieveData();
