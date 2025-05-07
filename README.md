@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](Frontend Mentor)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/jscss-grid-time-tracking-dashboard-LLxIDPVpPa)
 - Live Site URL: [Netlify](https://celadon-kelpie-049ef6.netlify.app/)
 
 ## My process
