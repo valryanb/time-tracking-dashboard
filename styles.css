@@ -260,6 +260,10 @@ footer a {
     color: var(--purple-light)
 }
 
+#links .active {
+    color: white;
+}
+
 /* MOBILE BREAKPOINTS: 
 
 - Mobile: 375px
